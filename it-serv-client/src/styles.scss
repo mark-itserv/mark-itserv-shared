@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+// Custom styles
+@import '/src//assets//styles/colours.scss';
+@import '/src//assets//styles/variables.scss';
+
+html, body {
+    font-family: 'Secular One', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: $colour-primary;
+    color: #fff;
+}
+
+.container {
+    margin-top: $navbar-height;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.15s linear all;
+}
+
+p {
+    margin-bottom: 0;
+}
+
+span {
+    color: $colour-secondary;
+}

@@ -1,0 +1,18 @@
+<div class="map">
+  <google-map
+    height="450px"
+    width="100%"
+    [center]="center"
+    [zoom]="zoom"
+    [options]="mapOptions"
+  >
+    <map-marker
+      #marker="mapMarker"
+      *ngFor="let markerPosition of markerPositions"
+      [position]="markerPosition"
+      [options]="markerOptions"
+      (mapClick)="openInfoWindow(marker)"
+    ></map-marker>
+    <map-info-window>Mount Sheridan, Cairns, Qld</map-info-window>
+  </google-map>
+</div>

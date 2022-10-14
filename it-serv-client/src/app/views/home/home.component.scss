@@ -1,0 +1,34 @@
+@import '/src/assets/styles/variables.scss';
+@import '/src/assets/styles/colours.scss';
+@import '/src/assets/styles/position.scss';
+@import '/src/assets/styles/buttons.scss';
+@import '/src/assets/styles/animations.scss';
+
+:host {
+    .home {
+        @extend .center;
+        flex-direction: column;
+        padding-top: $navbar-height;
+        height: 100vh; 
+        color: #fff;
+
+        h1 {
+            font-weight: 700;
+            font-size: 7rem;
+
+            &:nth-child(2) {
+                transition-delay: 1.25s !important;
+            }
+        }
+
+        span {
+            display: inline-block;
+            animation: scaleUpPulse 10s infinite ease-in-out;
+        }
+
+        .button-secondary {
+            transition: 0.4s all linear;
+            transition: 2s transform linear;
+        }
+    }
+}

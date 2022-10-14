@@ -1,0 +1,35 @@
+@import '/src/assets/styles/animations.scss';
+@import '/src/assets/styles/buttons.scss';
+@import '/src/assets/styles/position.scss';
+
+:host {
+    .about {
+        margin-bottom: 10%;
+        img {
+            animation: float 10s infinite ease-in-out;
+        }
+
+        &-card {
+            @extend .center;
+            gap: 1rem;
+            font-size: 1.1rem;
+            background: #fff;
+            color: #000;
+            padding: 1.1rem;
+            border-radius: 5px;
+            transition: 0.15s linear all;
+
+            svg {
+                color: $colour-secondary;
+            }
+
+            &:hover {
+                color: #fff;
+                background-color: $colour-secondary;
+                svg {
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

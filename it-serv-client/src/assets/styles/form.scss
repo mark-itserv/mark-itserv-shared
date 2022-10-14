@@ -1,0 +1,55 @@
+@import 'colours.scss';
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+
+    input {
+        width: 100%;
+    }
+
+    input, textarea {
+        font-size: 1rem;
+        padding: 0.75rem;
+        border: 1px solid rgba(255,255,255,0.1);
+        border-radius: 7px;
+        background: transparent;
+
+        &:focus, &:hover {
+            outline: none;
+        }
+
+        &:hover {
+            border: 1px solid #fff;
+        }
+
+        &:focus {
+            border: 1px solid $colour-secondary;
+        }
+    }
+
+    .form-input-group, span {
+        margin: 1rem 1.5rem 1rem 0;
+    }
+
+    textarea {
+        margin: 1rem 0;
+        resize: none;
+    }
+
+    ::placeholder {
+        opacity: 0.85;
+        font-weight: 300;
+    }
+
+    .form-input-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    label {
+        text-align: start;
+    }
+}

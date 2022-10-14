@@ -1,0 +1,35 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-column {
+    @extend .center;
+    flex-direction: column;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -150px;
+    visibility: hidden;
+}
