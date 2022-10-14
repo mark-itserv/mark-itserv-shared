@@ -1,0 +1,79 @@
+@import '/src/assets/styles/position.scss';
+@import '/src/assets/styles/buttons.scss';
+@import '/src/assets/styles/colours.scss';
+@import '/src/assets/styles/shadows.scss';
+
+.service {
+    @extend .center-column;
+    @extend .shadow-light;
+    transition: 0.15s ease-in-out all;
+
+    gap: 1rem;
+    * {
+        margin: 0;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+
+i, svg {
+    transition: 0.15s linear all;
+    &:hover {
+        color: $colour-primary-dark;
+    }
+}
+
+.fa-duotone {
+    transition: 0.15s linear all;
+}
+
+.fa-5x, .fa-4x, .fa-3x, .fa-2x {
+    &:hover {
+        transform: translateY(-5%);
+    }
+}
+
+.fa-arrows-spin {
+    &:hover {
+        transform: rotate(45deg);
+    }
+}
+
+.fa-dumbbell {
+    &:hover {
+        transform: rotate(90deg) translateY(-10%);
+    }   
+}
+
+.fa-house-chimney-medical {
+    &:hover {
+        transform: rotate(-10deg) translateY(-10%);
+    }
+}
+
+.fa-couch {
+    &:hover {
+        transform: rotate(10deg) translateY(-10%);
+    }   
+}
+
+.fa-car, .fa-comments {
+    &:hover {
+        transform: scale(1.1) translateY(-5%);
+    }   
+}
+
+.fa-list-check, .fa-people-arrows {
+    &:hover {
+        transform: translateX(-8%);
+    }   
+}
+
+.fa-people-group, .fa-kitchen-set {
+    &:hover {
+        transform:  translateX(8%);
+    }   
+}

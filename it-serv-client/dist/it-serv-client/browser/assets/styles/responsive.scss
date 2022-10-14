@@ -1,0 +1,24 @@
+.hide-tablet {
+    @media (max-width: 800px) {
+      display: none !important;
+    }
+  }
+  
+.hide-mobile {
+    @media (max-width: 500px) {
+      display: none !important;
+    }
+  }
+
+.show-tablet {
+    @media (min-width: 800px) {
+      display: none !important;
+    }
+  }
+  
+  
+.show-mobile {
+    @media (min-width: 500px) {
+      display: none !important;
+    }
+  }

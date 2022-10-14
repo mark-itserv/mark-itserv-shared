@@ -1,0 +1,62 @@
+@import 'colours.scss';
+
+.button {
+    outline: none !important;
+    background-color: $colour-primary;
+    padding: 0.65rem 1.8rem !important;
+    border: none;
+    border-radius: 3px;
+    transition: 0.15s all linear;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $colour-primary-dark;
+    }
+}
+
+.button-secondary {
+    @extend .button;
+    color: #fff !important;
+    background-color: $colour-secondary;
+    border: 2px solid $colour-secondary;
+    border-radius: 4px;
+
+    &:hover {
+        color: $colour-secondary !important;
+        background-color: #fff;
+        border: 2px solid #fff;
+    }
+}
+
+.button-outline {
+    @extend .button;
+    color: $colour-dark !important;
+    background-color: #fff;
+    border: 2px solid $colour-primary;
+    border-radius: 4px;
+
+    &:hover {
+        color: #fff !important;
+        background-color: $colour-primary-dark;
+        border: 2px solid $colour-primary-dark;
+    }
+}
+
+.button-dark {
+    @extend .button;
+    &:hover {
+        background-color: $colour-dark;
+        color: #fff;
+    }
+}
+
+.hover {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+a.button, a.button-outline  {
+    color: $colour-dark;
+}
