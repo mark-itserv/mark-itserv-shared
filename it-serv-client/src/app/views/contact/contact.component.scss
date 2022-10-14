@@ -7,6 +7,7 @@
 
 :host {
     .contact {
+        position: relative;
         padding-top: $navbar-height;
 
         .banner {
@@ -16,6 +17,15 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+        }
+
+        .circle {
+            position: absolute;
+            z-index: -1;
+            bottom: -25%;
+            right: 17%;
+            filter: blur(5px) brightness(80%);
+            animation: spin 150s infinite linear;
         }
 
         .container  {

@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,10 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: any) {}
+  constructor(
+    private title: Title,
+    @Inject(PLATFORM_ID) private platformId: any
+  ) {}
 
   ngOnInit(): void {}
 

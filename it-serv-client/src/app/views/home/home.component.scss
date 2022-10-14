@@ -11,6 +11,26 @@
         padding-top: $navbar-height;
         height: 100vh; 
         color: #fff;
+        position: relative;
+
+        .circle, .triangle {
+            position: absolute;
+            z-index: -1;
+            filter: blur(3px) brightness(90%);
+        }
+
+        .circle {
+            top: 25%;
+            right: -5%;
+        }
+
+        .triangle {
+            top: 10%;
+            left: 5%;
+            height: 40%;
+            width: auto;
+            animation: spin 150s infinite linear;
+        }
 
         h1 {
             font-weight: 700;

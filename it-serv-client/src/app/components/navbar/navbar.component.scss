@@ -1,15 +1,19 @@
 @import '/src/assets//styles/variables.scss';
 @import '/src/assets//styles/buttons.scss';
 @import '/src/assets//styles/colours.scss';
+@import '/src/assets//styles/shadows.scss';
 
 :host {
     .navbar {
+        @extend .shadow-light;
+        z-index: 100;
         position: fixed;
         top: 0;
         height: $navbar-height;
         max-height: $navbar-height;
         width: 100%;
         color: #fff;
+        background-color: $colour-primary-dark;
 
         h1 {
             font-weight: 700;
