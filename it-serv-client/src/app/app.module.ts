@@ -12,6 +12,9 @@ import { ContactComponent } from './views/contact/contact.component';
 import { GoogleMapsModule } from '@angular/google-maps';
 import { MapComponent } from './components/map/map.component';
 import { AboutComponent } from './views/about/about.component';
+import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { AboutComponent } from './views/about/about.component';
     FormsModule,
     ReactiveFormsModule,
     GoogleMapsModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent],

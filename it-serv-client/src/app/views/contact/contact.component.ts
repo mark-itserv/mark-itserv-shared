@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-contact',
@@ -36,7 +38,10 @@ export class ContactComponent implements OnInit {
     return this.form.get('message');
   }
 
-  constructor(private _formBuilder: FormBuilder) {}
+  constructor(
+    private _formBuilder: FormBuilder,
+    private _toastr: ToastrService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -49,5 +54,41 @@ export class ContactComponent implements OnInit {
     this.sendEmail(e);
   }
 
-  private sendEmail(e: Event) {}
+  private sendEmail(e: Event) {
+    emailjs
+      .sendForm(
+        'service_0fgawsv',
+        'template_z2fgtmb',
+        e.target as HTMLFormElement,
+        'ETKzyvMei2cm3LVNM'
+      )
+      .then(
+        (result: EmailJSResponseStatus) => {
+          this._toastr.success(
+            'Your query has been submitted. We will be in touch shortly. Thank you',
+            'Success',
+            {
+              positionClass: 'toast-bottom-right',
+              timeOut: 5000,
+            }
+          );
+          this.isSubmitting = false;
+          this.form.reset();
+        },
+        (error) => {
+          this._toastr.error(
+            'We were unable to send your query. Please email help@itserv.com.au',
+            'Oh no...',
+            {
+              positionClass: 'toast-bottom-right',
+              timeOut: 0,
+              extendedTimeOut: 0,
+              closeButton: true,
+            }
+          );
+          this.isSubmitting = false;
+          this.form.reset();
+        }
+      );
+  }
 }
